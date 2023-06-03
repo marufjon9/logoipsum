@@ -1,12 +1,18 @@
-@mixin df($align, $justify) {
+@mixin df($align, $jf) {
   display: flex;
   align-items: $align;
-  justify-content: $justify;
+  justify-content: $jf;
 }
 
-@mixin bg-img($url) {
-  background-image: $url;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: center;
+@mixin l-reset {
+  list-style: none;
+  padding-left: 0;
+  text-decoration: none;
 }
+
+// @mixin bg-img($url) {
+//   background-image: $url;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: center;
+// }
