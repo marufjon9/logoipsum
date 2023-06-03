@@ -1,0 +1,12 @@
+@mixin df($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin bg-img($url) {
+  background-image: $url;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+}
