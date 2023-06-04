@@ -1,0 +1,298 @@
+@use "../mixins";
+
+.testimonials {
+}
+.container {
+}
+.testimonials__textbox {
+  text-align: center;
+  max-width: 287px;
+  margin: 0 auto;
+}
+.testimonials__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.testimonials__text {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--main-gray-text-color);
+  margin-bottom: 30px;
+}
+.btn {
+}
+.left-btn {
+}
+.testimonials__list {
+  @include mixins.l-reset;
+}
+
+.testimonials__navigate {
+}
+
+.testimonials__navigate::after {
+  content: "";
+  background-image: url("/images/dots-min.svg");
+  width: 92px;
+  height: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+.testimonials__item {
+  padding: 30px;
+  max-width: 282px;
+  margin: 0 auto;
+
+  background-color: var(--main-hover);
+  border-radius: 8px;
+}
+.left-btn,
+.right-btn {
+  display: none;
+}
+.righ .testimonials__wrapper {
+}
+.testimonials__star {
+  display: block;
+}
+.testimonials__star::before {
+  content: "";
+  background-image: url("/images/Stars.svg");
+  width: 111px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+.testimonials__content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.testimonials__inner {
+}
+.comment__wrapper {
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.comment::before {
+  content: "";
+  background-image: url("/images/Brooklyn\ Simmons@1x.png");
+  width: 53px;
+  height: 53px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+.comment__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+.comment__address {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--main-gray-text-color);
+}
+
+.testimonials__item:nth-child(2n + 1) {
+  display: none;
+}
+
+@media only screen and (min-width: 375px) {
+  .testimonials__textbox {
+    max-width: 342px;
+  }
+  .comment__title {
+    font-size: 20px;
+  }
+  .comment__address {
+    font-size: 16px;
+  }
+  .testimonials__item {
+    max-width: 320px;
+  }
+}
+@media only screen and (min-width: 675px) {
+  .testimonials__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .testimonials__item {
+    max-width: 310px;
+    margin: 0;
+  }
+
+  .testimonials__item:nth-child(2n + 1) {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1075px) {
+  .testimonials__textbox {
+    max-width: 344px;
+  }
+
+  .testimonials__container {
+    position: relative;
+  }
+
+  .btn {
+    width: 53px;
+    height: 53px;
+    border: 1px solid var(--link-color);
+    border-radius: 48px;
+    background-color: transparent;
+    &:hover {
+      filter: invert(69%) sepia(8%) saturate(2402%) hue-rotate(287deg)
+        brightness(101%) contrast(101%);
+    }
+  }
+  .left-btn {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: -9px;
+    background-image: url("/images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: center;
+    transform: rotate(180deg);
+  }
+  .right-btn {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    right: -9px;
+    background-image: url("/images/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 23px;
+    background-position: center;
+  }
+
+  .left-btn,
+  .right-btn {
+    display: block;
+  }
+
+  // .testimonials__list {
+  //   @include mixins.l-reset;
+  // }
+
+  // .testimonials__navigate {
+  // }
+
+  // .testimonials__navigate::after {
+  //   content: "";
+  //   background-image: url("/images/dots-min.svg");
+  //   width: 92px;
+  //   height: 26px;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   display: block;
+  //   margin: 20px auto 0 auto;
+  // }
+  // .testimonials__item {
+  //   padding: 30px;
+  //   max-width: 282px;
+  //   margin: 0 auto;
+
+  //   background-color: var(--main-hover);
+  //   border-radius: 8px;
+  // }
+  // .left-btn,
+  // .right-btn {
+  //   display: none;
+  // }
+  // .righ .testimonials__wrapper {
+  // }
+  // .testimonials__star {
+  //   display: block;
+  // }
+  // .testimonials__star::before {
+  //   content: "";
+  //   background-image: url("/images/Stars.svg");
+  //   width: 111px;
+  //   height: 18px;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   display: block;
+  // }
+  // .testimonials__content {
+  //   font-weight: 400;
+  //   font-size: 14px;
+  //   line-height: 155%;
+  //   letter-spacing: 0.02em;
+  //   margin-top: 30px;
+  //   margin-bottom: 30px;
+  // }
+  // .testimonials__inner {
+  // }
+  // .comment__wrapper {
+  // }
+
+  // .comment {
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 15px;
+  // }
+  // .comment::before {
+  //   content: "";
+  //   background-image: url("/images/Brooklyn\ Simmons@1x.png");
+  //   width: 53px;
+  //   height: 53px;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   display: inline-block;
+  // }
+  // .comment__title {
+  //   font-weight: 500;
+  //   font-size: 18px;
+  //   line-height: 150%;
+  //   letter-spacing: -0.01em;
+  // }
+  // .comment__address {
+  //   font-size: 14px;
+  //   line-height: 150%;
+  //   color: var(--main-gray-text-color);
+  // }
+
+  // .testimonials__item:nth-child(2n + 1) {
+  //   display: none;
+  // }
+}
+
+@media only screen and (min-width: 1200px) {
+  .left-btn {
+    left: -27px;
+  }
+  .right-btn {
+    right: -27px;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .testimonials__item {
+    max-width: 405px;
+  }
+}
