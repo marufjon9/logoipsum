@@ -2,8 +2,6 @@
 .soft {
   padding-bottom: 80px;
 }
-.soft__wrapper {
-}
 .soft__textbox {
   text-align: center;
 }
@@ -46,6 +44,7 @@
   max-width: 288px;
   min-height: 246px;
   margin-bottom: 33px;
+  margin: 0 auto;
 }
 .soft__heading {
   font-weight: 700;
@@ -105,12 +104,24 @@
   .soft__img {
     margin-bottom: 46px;
   }
+  .soft__item {
+    max-width: 443px;
+  }
 }
 
-@media only screen and (min-width: 1024px) {
+// @media only screen and (min-width: 1000px) {
+//   .soft__item {
+//     max-width: 300px;
+//   }
+// }
+
+@media only screen and (min-width: 1132px) {
   .soft__list {
     flex-direction: row;
     gap: 32px;
+  }
+  .soft__img {
+    min-height: 294px;
   }
 }
 @media only screen and (min-width: 1320px) {

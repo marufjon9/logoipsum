@@ -1,0 +1,153 @@
+@use "../mixins";
+
+.protection {
+  padding-bottom: 45px;
+}
+
+.protection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include mixins.l-reset;
+}
+.protection__item {
+  padding-bottom: 20px;
+}
+.protection__img {
+  max-width: 277px;
+  margin: 0 auto 50px auto;
+}
+.protection__textbox {
+  text-align: center;
+}
+.protection__title {
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+.protection__content {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  color: var(--main-gray-text-color);
+  font-size: 13px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+}
+.protection__link {
+  border: 1px solid var(--link-color);
+  background-color: transparent;
+  color: var(--link-color);
+  transition: 0.5s ease;
+  &:hover {
+    background-color: var(--link-color);
+    color: #fff;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .protection__img {
+    max-width: 332px;
+  }
+
+  .protection__title {
+    font-size: 36px;
+  }
+  .protection__content {
+    font-size: 16px;
+  }
+  .protection__textbox {
+    max-width: 343px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 790px) {
+  .protection {
+    padding-bottom: 45px;
+  }
+
+  .protection__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include mixins.l-reset;
+  }
+  .protection__item {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+  .protection__img {
+    max-width: 390px;
+    margin: 0 auto 50px auto;
+  }
+  .protection__textbox {
+    max-width: 390px;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .protection {
+    padding-bottom: 0px;
+  }
+
+  .protection__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    @include mixins.l-reset;
+  }
+  .protection__img {
+    max-width: 420px;
+    margin-bottom: 0;
+  }
+  .protection__textbox {
+    max-width: 420px;
+  }
+
+  .protection__item .container {
+    display: flex;
+
+    align-items: center;
+  }
+  .protection__item:nth-child(odd) .container {
+    flex-direction: row-reverse;
+  }
+  .protection__textbox {
+    max-width: 343px;
+    text-align: left;
+  }
+  .protection__title {
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+  }
+  .protection__content {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    color: var(--main-gray-text-color);
+    font-size: 13px;
+    line-height: 155%;
+    letter-spacing: 0.02em;
+  }
+  .protection__link {
+    text-align: center;
+    width: 187px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .protection__img {
+    max-width: 520px;
+  }
+  .protection__textbox {
+    max-width: 650px;
+  }
+}
+
+@media only screen and (min-width: 1236px) {
+  .protection__img {
+    max-width: 850px;
+  }
+  .protection__textbox {
+    max-width: 850px;
+  }
+}

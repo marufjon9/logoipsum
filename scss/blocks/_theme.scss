@@ -13,3 +13,13 @@
   background-color: var(--dark-link-color);
   color: var(--text-black);
 }
+
+.dark .protection__link:hover {
+  background-color: var(--link-color-1);
+  border: 1px solid var(--link-color-1);
+  color: var(--main-text-color);
+}
+
+.dark .protection__item:nth-child(odd) {
+  background-color: var(--main-hover);
+}
