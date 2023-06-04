@@ -1,9 +1,9 @@
 @use "../mixins";
-
 .testimonials {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-.container {
-}
+
 .testimonials__textbox {
   text-align: center;
   max-width: 287px;
@@ -22,17 +22,9 @@
   color: var(--main-gray-text-color);
   margin-bottom: 30px;
 }
-.btn {
-}
-.left-btn {
-}
 .testimonials__list {
   @include mixins.l-reset;
 }
-
-.testimonials__navigate {
-}
-
 .testimonials__navigate::after {
   content: "";
   background-image: url("/images/dots-min.svg");
@@ -48,16 +40,19 @@
   padding: 30px;
   max-width: 282px;
   margin: 0 auto;
-
-  background-color: var(--main-hover);
+  border: 1px solid transparent;
+  background-color: var(--main-dark-bg);
   border-radius: 8px;
+  transition: 0.5s ease;
+  &:hover {
+    border: 1px solid var(--link-color);
+  }
 }
 .left-btn,
 .right-btn {
   display: none;
 }
-.righ .testimonials__wrapper {
-}
+
 .testimonials__star {
   display: block;
 }
@@ -79,11 +74,6 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.testimonials__inner {
-}
-.comment__wrapper {
-}
-
 .comment {
   display: flex;
   align-items: center;
@@ -117,7 +107,7 @@
 
 @media only screen and (min-width: 375px) {
   .testimonials__textbox {
-    max-width: 342px;
+    max-width: 542px;
   }
   .comment__title {
     font-size: 20px;
@@ -147,7 +137,7 @@
 }
 @media only screen and (min-width: 1075px) {
   .testimonials__textbox {
-    max-width: 344px;
+    max-width: 622px;
   }
 
   .testimonials__container {
@@ -191,95 +181,6 @@
   .right-btn {
     display: block;
   }
-
-  // .testimonials__list {
-  //   @include mixins.l-reset;
-  // }
-
-  // .testimonials__navigate {
-  // }
-
-  // .testimonials__navigate::after {
-  //   content: "";
-  //   background-image: url("/images/dots-min.svg");
-  //   width: 92px;
-  //   height: 26px;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   display: block;
-  //   margin: 20px auto 0 auto;
-  // }
-  // .testimonials__item {
-  //   padding: 30px;
-  //   max-width: 282px;
-  //   margin: 0 auto;
-
-  //   background-color: var(--main-hover);
-  //   border-radius: 8px;
-  // }
-  // .left-btn,
-  // .right-btn {
-  //   display: none;
-  // }
-  // .righ .testimonials__wrapper {
-  // }
-  // .testimonials__star {
-  //   display: block;
-  // }
-  // .testimonials__star::before {
-  //   content: "";
-  //   background-image: url("/images/Stars.svg");
-  //   width: 111px;
-  //   height: 18px;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   display: block;
-  // }
-  // .testimonials__content {
-  //   font-weight: 400;
-  //   font-size: 14px;
-  //   line-height: 155%;
-  //   letter-spacing: 0.02em;
-  //   margin-top: 30px;
-  //   margin-bottom: 30px;
-  // }
-  // .testimonials__inner {
-  // }
-  // .comment__wrapper {
-  // }
-
-  // .comment {
-  //   display: flex;
-  //   align-items: center;
-  //   gap: 15px;
-  // }
-  // .comment::before {
-  //   content: "";
-  //   background-image: url("/images/Brooklyn\ Simmons@1x.png");
-  //   width: 53px;
-  //   height: 53px;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   background-size: cover;
-  //   display: inline-block;
-  // }
-  // .comment__title {
-  //   font-weight: 500;
-  //   font-size: 18px;
-  //   line-height: 150%;
-  //   letter-spacing: -0.01em;
-  // }
-  // .comment__address {
-  //   font-size: 14px;
-  //   line-height: 150%;
-  //   color: var(--main-gray-text-color);
-  // }
-
-  // .testimonials__item:nth-child(2n + 1) {
-  //   display: none;
-  // }
 }
 
 @media only screen and (min-width: 1200px) {

@@ -1,0 +1,147 @@
+@use "../mixins";
+
+.pricing {
+  padding-top: 80px;
+}
+.pricing__wrapper {
+}
+.pricing__textbox {
+  text-align: center;
+}
+.pricing__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.pricing__text {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  margin-bottom: 30px;
+}
+.pricing__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include mixins.l-reset;
+}
+.pricing__item {
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border: 1px solid transparent;
+  transition: 0.5 ease-in-out;
+}
+.prices {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.pricing__item:hover {
+  border: 1px solid var(--link-color);
+  border-radius: 17px;
+  .prices__link {
+    background-color: var(--link-color);
+    color: var(--main-bg-color);
+  }
+}
+.prices__textbox {
+  text-align: center;
+}
+.prices__title {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  margin-bottom: 8px;
+}
+.prices__price {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 120%;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.prices__subprice {
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  color: var(--main-gray-text-color);
+}
+.prices__inner {
+  margin: 0 auto;
+  max-width: 293px;
+}
+.prices__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include mixins.l-reset;
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+.prices__item {
+  font-size: 14px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  &::before {
+    content: "";
+    background-image: url("/images/check-light.svg");
+    width: 16.58px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+
+.link {
+}
+.prices__link {
+  text-align: center;
+  background-color: var(--main-bg-color);
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
+  border-radius: 32px;
+  margin: 0 auto;
+  display: block;
+  transition: 0.5s ease;
+  &:hover {
+    background-color: var(--link-color);
+    color: var(--main-bg-color);
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .pricing__textbox {
+    max-width: 297px;
+    margin: 0 auto;
+  }
+  .pricing__text {
+    font-size: 16px;
+  }
+
+  .prices__inner {
+    max-width: 333px;
+  }
+  .prices__item {
+    font-size: 16px;
+  }
+  .prices {
+    max-width: 333px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media only screen and (min-width: 1075px) {
+  .pricing__list {
+    flex-direction: row;
+  }
+  .pricing__textbox {
+    max-width: 584px;
+  }
+}

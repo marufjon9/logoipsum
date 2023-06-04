@@ -4,6 +4,7 @@
   --main-gray-text-color: #d6d6d6;
   --main-hover: #211f25;
   --link-color: #ff94c7;
+  --main-dark-bg: #555;
 }
 
 .dark .hero {
@@ -21,5 +22,13 @@
 }
 
 .dark .protection__item:nth-child(odd) {
+  background-color: var(--main-hover);
+}
+
+.dark .prices__item::before {
+  background-image: url("/images/Check-min.svg");
+}
+
+.dark .testimonials {
   background-color: var(--main-hover);
 }
