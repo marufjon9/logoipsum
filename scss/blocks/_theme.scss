@@ -1,4 +1,15 @@
 .dark {
   --main-text-color: #fff;
   --main-bg-color: #000;
+  --main-gray-text-color: #d6d6d6;
+  --main-hover: #211f25;
+  --link-color: #ff94c7;
+}
+
+.dark .hero {
+  background-image: url("/images/her-bg-dark-mobile.svg");
+}
+.dark .darker {
+  background-color: var(--dark-link-color);
+  color: var(--text-black);
 }

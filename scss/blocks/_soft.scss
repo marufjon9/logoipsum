@@ -1,0 +1,120 @@
+@use "../mixins";
+.soft {
+  padding-bottom: 80px;
+}
+.soft__wrapper {
+}
+.soft__textbox {
+  text-align: center;
+}
+.soft__title {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 42px;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.soft__text {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  color: var(--main-gray-text-color);
+  margin-bottom: 30px;
+}
+.soft__list {
+  flex-direction: column;
+  display: flex;
+  gap: 30px;
+  @include mixins.l-reset;
+}
+.soft__item {
+  text-align: center;
+  max-width: 288px;
+  padding-bottom: 16px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: var(--main-hover);
+    border-radius: 8px;
+    .soft__link {
+      color: var(--link-color);
+    }
+  }
+}
+
+.soft__img {
+  max-width: 288px;
+  min-height: 246px;
+  margin-bottom: 33px;
+}
+.soft__heading {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+.soft__content {
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  color: var(--main-gray-text-color);
+  margin-bottom: 40px;
+}
+.soft__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 155%;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 375px) {
+  .soft__textbox {
+    text-align: center;
+    min-width: 343px;
+    max-width: 575px;
+    margin: 0 auto;
+  }
+  .soft__title {
+    font-size: 36px;
+    padding-top: 40px;
+  }
+  .soft__item {
+    max-width: 343px;
+  }
+
+  .soft__img {
+    max-width: 343px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .soft__title {
+    font-size: 48px;
+    margin-bottom: 16px;
+    line-height: 58px;
+  }
+
+  .soft__text {
+    line-height: 25px;
+    margin-bottom: 80px;
+  }
+
+  .soft__img {
+    margin-bottom: 46px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .soft__list {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+@media only screen and (min-width: 1320px) {
+  .soft__item {
+    max-width: 405px;
+  }
+}
