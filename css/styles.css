@@ -372,6 +372,7 @@ template {
   --main-gray-text-color: #3d3a41;
   --main-hover: #f7f5ff;
   --main-dark-bg: #f7f5ff;
+  --subscription-bg-color: #6b50ff;
 }
 
 * {
@@ -436,6 +437,12 @@ main {
   --main-hover: #211f25;
   --link-color: #ff94c7;
   --main-dark-bg: #555;
+  --subscription-bg-color: linear-gradient(
+      97.57deg,
+      #1a1822 -22.54%,
+      #9040e3 204.91%
+    ),
+    #6b50ff;
 }
 
 .dark .hero {
@@ -1259,6 +1266,7 @@ main {
 }
 .pricing {
   padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .pricing__textbox {
@@ -1384,6 +1392,8 @@ main {
 }
 
 .prices__link {
+  font-family: "Roboto";
+  font-weight: 400;
   text-align: center;
   background-color: var(--main-bg-color);
   color: var(--link-color);
@@ -1421,6 +1431,19 @@ main {
     padding-right: 12px;
   }
 }
+@media only screen and (min-width: 650px) {
+  .pricing__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 @media only screen and (min-width: 1075px) {
   .pricing__list {
     -webkit-box-orient: horizontal;
@@ -1430,5 +1453,149 @@ main {
   }
   .pricing__textbox {
     max-width: 584px;
+  }
+}
+.subscription {
+  background: var(--subscription-bg-color);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+.subscription__textbox {
+  text-align: center;
+  max-width: 879px;
+  margin: 0 auto;
+}
+
+.subscription__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.subscription__text {
+  font-size: 15px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+
+.subscription__wrapper {
+  max-width: 338px;
+  margin: 0 auto;
+}
+
+.subscription__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__input {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 365px;
+  width: 100%;
+  min-width: 187px;
+  display: inline-block;
+  padding: 12px 0px 12px 28px;
+  border-radius: 32px;
+  border: transparent;
+}
+
+.form__input::-webkit-input-placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
+.form__input::-moz-placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
+.form__input:-ms-input-placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
+.form__input::-ms-input-placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
+.form__input::placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #505050;
+}
+
+.form__button {
+  max-width: 132px;
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 12px 0;
+}
+
+.subscription__inner {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subscription__link {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 150%;
+}
+
+.subscription__blank {
+  color: #fff;
+}
+
+@media only screen and (min-width: 375px) {
+  .subscription__title {
+    font-size: 38px;
+  }
+  .subscription__text {
+    font-size: 18px;
+  }
+  .subscription__wrapper {
+    max-width: 513px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .subscription__title {
+    font-size: 48px;
+  }
+  .subscription__wrapper {
+    max-width: 513px;
+  }
+  .subscription__link {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=styles.css.map */
