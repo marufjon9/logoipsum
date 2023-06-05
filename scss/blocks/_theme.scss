@@ -11,6 +11,8 @@
       #9040e3 204.91%
     ),
     #6b50ff;
+  --news-bg-color: #211f25;
+  --main-card-hover: #555;
 }
 
 .dark .hero {
@@ -37,4 +39,20 @@
 
 .dark .testimonials {
   background-color: var(--main-hover);
+}
+
+.dark .news__tag {
+  background-color: unset;
+}
+
+.dark .news__item:hover {
+  box-shadow: unset;
+}
+
+.dark .news__view:after {
+  background-image: url(/images/arrow-dark-theme.svg);
+}
+
+.dark .news__item:hover .news__view::after {
+  background-image: url(/images/arrow-dark-theme.svg);
 }

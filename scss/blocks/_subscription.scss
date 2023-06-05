@@ -30,8 +30,6 @@
   gap: 10px;
   justify-content: center;
 }
-.form {
-}
 .form__input {
   font-family: "Roboto";
   font-weight: 400;
@@ -52,9 +50,6 @@
   line-height: 150%;
   color: #505050;
 }
-
-.link {
-}
 .form__button {
   max-width: 132px;
   width: 100%;
@@ -63,6 +58,9 @@
   font-size: 16px;
   line-height: 150%;
   padding: 12px 0;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .subscription__inner {
   margin-top: 10px;
